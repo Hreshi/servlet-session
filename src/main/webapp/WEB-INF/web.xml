@@ -40,11 +40,4 @@
     <servlet-name>logout</servlet-name>
     <url-pattern>/logout</url-pattern>
   </servlet-mapping>
-
-  <!-- default servlet -->
-  <!-- <servlet-mapping>
-    <servlet-name>default</servlet-name>
-    <url-pattern>/</url-pattern>
-  </servlet-mapping> -->
-
 </web-app>

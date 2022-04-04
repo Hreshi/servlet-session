@@ -23,7 +23,7 @@ public class SignUpServlet extends HttpServlet {
 			res.sendRedirect("home");
 		} else {
 			RequestDispatcher dispatcher = req.getRequestDispatcher("/static/html/signup.html");
-			dispatcher.forward(req, res);			
+			dispatcher.include(req, res);			
 		}
 	}
 

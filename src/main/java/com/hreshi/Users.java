@@ -24,7 +24,7 @@ public class Users {
 			Connection con = getConnection();
 			Statement stmt = con.createStatement();
 			ResultSet result = stmt.executeQuery(String.format(signInQuery, name));
-			boolean correctCred = result.next() == true && result.getString("pass") == pass;
+			boolean correctCred = result.next() == true && result.getString("pass").equals(pass);
 			con.close();
 			return correctCred; 	
 		} catch (Exception e) {

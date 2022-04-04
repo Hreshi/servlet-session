@@ -7,12 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import java.io.PrintWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.BufferedInputStream;
-
-
 public class HomeServlet extends HttpServlet { 
 	
 	@Override
