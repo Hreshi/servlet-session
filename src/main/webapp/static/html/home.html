@@ -4,18 +4,21 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>home</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/login.css">
 </head>
 <body>
 	<h1>Welcome to Wonderland!</h1>
-	<br>
-	<div id="user-info">
-		<span>
-			Username : 
-			Password :
-		</span>
+	<div id="todo-area">
+		<div id="todo-input-area">
+			<input id="todo-input" type="text" name="task" placeholder="enter task">
+			<button id="add-todo-button">Add</button>
+		</div>
+		<div id="todo-list-area">
+			<ul id="todo-list">
+					
+			</ul>
+		</div>
 	</div>
-	<form action="logout" method="post">
-		<input type="submit" name="logout" value="Logout">
-	</form>
-</body>
+	</body>
+<script type="text/javascript" src="/static/js/todo.js"></script>
 </html>

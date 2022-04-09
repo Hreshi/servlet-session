@@ -34,7 +34,7 @@ public class SignUpServlet extends HttpServlet {
 		} else {
 			String name = (String) req.getParameter("username");
 			String pass = (String) req.getParameter("password");
-			if (Users.signUpService(name, pass)) {
+			if (new Users().signUpService(name, pass)) {
 				HttpSession session = req.getSession();
 				session.setAttribute("user", name);
 				res.sendRedirect("home");

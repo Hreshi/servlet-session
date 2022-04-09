@@ -44,7 +44,7 @@ public class SignInServlet extends HttpServlet {
 	}
 
 	private boolean checkCred(String name, String pass) {
-		return Users.signInService(name, pass);
+		return new Users().signInService(name, pass);
 	}
 
 }
