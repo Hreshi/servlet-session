@@ -1,38 +1,32 @@
 let taskId = 1
+document.getElementById("add-todo-button").addEventListener("click",function () {
+	let todoInput = document.getElementById("todo-input")
+	let task = todoInput.value
+	todoInput.value = ""
+	addTask(task)
+})
 
-document.getElementById("add-todo-button").addEventListener("click", sendAddTodoRequest)
-function listener() {
-	let todoList = document.getElementsByTagName("li");
-	for (let i = 0;i < todoList.length;i++) {
-		todoList[i].addEventListener ("click", function (element) {
-			this.remove()
-		})
-	}
-}
-function sendAddTodoRequest() {
+function addTask(text) {
 	let task = {
 		id : taskId,
-		title : document.getElementById("todo-input").value
+		title : text
 	}
 	taskId += 1
-	addTodoToList(task)
-}
-function sendDeleteTodoRequest(element) {
-	deleteTodoFromList(element)
+	addTaskToList(task)
 }
 
-function addTodoToList(task) {
-	document.getElementById("todo-list").append(createLiElement(task))
-	listener()
-}
-function deleteTodoFromList(element) {
-	let li = element.parentNode
-	li.remove()
-}
-
-function createLiElement(task) {
-	let element = document.createElement("li")
-	element.id = "task:" + task.id
-	element.innerHTML = task.title + '<button>Delete</button>'
-	return element
+// adds task {id, title} to list
+function addTaskToList(task) {
+	let liElement = document.createElement("li")
+	liElement.id = task.id
+	let textElement = document.createTextNode(task.title)
+	let button = document.createElement("button")
+	button.innerText = "Remove"
+	liElement.appendChild(textElement)
+	liElement.appendChild(button)
+	
+	button.addEventListener("click", function () {
+		this.parentNode.remove()
+	})
+	document.getElementById("todo-list").appendChild(liElement)
 }
