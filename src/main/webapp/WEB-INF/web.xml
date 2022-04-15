@@ -42,11 +42,11 @@
   </servlet-mapping>
 
   <servlet>
-    <servlet-name>name</servlet-name>
-    <servlet-class>com.hreshi.NameService</servlet-class>
+    <servlet-name>task</servlet-name>
+    <servlet-class>com.hreshi.TodoController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>name</servlet-name>
-    <url-pattern>/name</url-pattern>
+    <servlet-name>task</servlet-name>
+    <url-pattern>/task</url-pattern>
   </servlet-mapping>
 </web-app>
